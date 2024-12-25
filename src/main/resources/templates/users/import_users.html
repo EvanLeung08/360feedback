@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Import Users</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+<div th:replace="common/header :: header"></div>
+<form th:action="@{/users/import}" method="post" enctype="multipart/form-data">
+    <label for="file">Select file:</label>
+    <input type="file" id="file" name="file" accept=".csv">
+    <button type="submit">Upload</button>
+</form>
+</body>
+</html>

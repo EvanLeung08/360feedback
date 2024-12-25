@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>User Dashboard</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+<div th:replace="common/header :: header"></div>
+<table>
+    <thead>
+    <tr>
+        <th>Dimension</th>
+        <th>Score</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="feedback : ${feedbacks}">
+        <td th:text="${feedback.dimension}"></td>
+        <td th:text="${feedback.score}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

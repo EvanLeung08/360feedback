@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Common Header</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+<header>
+    <h1>360 Feedback Overview</h1>
+    <nav>
+        <a th:href="@{/}">Login</a>
+        <a th:href="@{/feedback}">Feedback</a>
+        <a th:href="@{/manager}">Manager</a>
+        <a th:href="@{/users}">Users</a>
+        <a th:href="@{/users/import}">Import</a>
+        <div class="user-info" th:text="${userInfo}"></div>
+    </nav>
+</header>
+</body>
+</html>

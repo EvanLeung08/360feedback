@@ -1,0 +1,135 @@
+/* src/main/resources/static/css/styles.css */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #272822;
+    color: #f8f8f2;
+}
+
+h1 {
+    text-align: center;
+    color: #a6e22e;
+    margin-top: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+header {
+    background: linear-gradient(135deg, #66d9ef, #a6e22e);
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 0 0 10px 10px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #272822;
+}
+
+nav {
+    text-align: center;
+    margin-top: 10px;
+}
+
+nav a {
+    color: #272822;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    margin: 0 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+nav a:hover {
+    background: #a6e22e;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+form {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(62, 61, 50, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #66d9ef;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #75715e;
+    border-radius: 4px;
+    background-color: rgba(73, 72, 62, 0.8);
+    color: #f8f8f2;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #66d9ef;
+    border: none;
+    border-radius: 4px;
+    color: #272822;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #a6e22e;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: rgba(62, 61, 50, 0.8);
+    color: #f8f8f2;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+table th,
+table td {
+    padding: 10px;
+    border: 1px solid rgba(117, 113, 94, 0.8);
+    text-align: left;
+}
+
+table th {
+    background: rgba(73, 72, 62, 0.8);
+    color: #a6e22e;
+}
+
+table tr:nth-child(even) {
+    background: rgba(73, 72, 62, 0.6);
+}
+
+table tr:hover {
+    background: rgba(56, 56, 48, 0.8);
+}
+
+.user-info {
+    float: right;
+    color: #272822;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Manager Feedback</title>
+    <link rel="stylesheet" th:href="@{/css/manager.css}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div th:replace="common/header :: header"></div>
+
+<div th:each="entry : ${feedbacksByReviewee}" class="reviewee-section">
+    <div class="reviewee-header">
+        <h2 th:text="${entry.key.id} + ' - ' + ${entry.key.username}"></h2>
+    </div>
+    <table class="feedback-table">
+        <thead>
+        <tr>
+            <th>Reviewer</th>
+            <th>Dimension</th>
+            <th>Score</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="feedback : ${entry.value}">
+            <td th:text="${feedback.reviewer.username}"></td>
+            <td th:text="${feedback.dimension}"></td>
+            <td th:text="${feedback.score}"></td>
+        </tr>
+        </tbody>
+    </table>
+    <h3>Total Scores</h3>
+    <table class="score-table">
+        <thead>
+        <tr>
+            <th>Dimension</th>
+            <th>Total Score</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="dimension, score : ${totalScores[entry.key].entrySet()}">
+            <td th:text="${dimension.key}"></td>
+            <td th:text="${dimension.value}"></td>
+        </tr>
+        </tbody>
+    </table>
+    <h3>Average Scores</h3>
+    <table class="score-table">
+        <thead>
+        <tr>
+            <th>Dimension</th>
+            <th>Average Score</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="dimension, score : ${averageScores[entry.key].entrySet()}">
+            <td th:text="${dimension.key}"></td>
+            <td th:text="${dimension.value}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="pagination">
+    <a th:if="${currentPage > 0}" th:href="@{/manager(page=${currentPage - 1})}">&laquo; Previous</a>
+    <span th:each="i : ${#numbers.sequence(0, totalPages - 1)}">
+        <a th:href="@{/manager(page=${i})}" th:text="${i + 1}" th:classappend="${i == currentPage} ? 'active'"></a>
+    </span>
+    <a th:if="${currentPage < totalPages - 1}" th:href="@{/manager(page=${currentPage + 1})}">Next &raquo;</a>
+</div>
+
+</body>
+</html>

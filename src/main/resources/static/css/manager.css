@@ -1,0 +1,124 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e1e;
+    color: #f8f8f2;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    color: #a6e22e;
+    margin-top: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+header {
+    background: linear-gradient(135deg, #66d9ef, #a6e22e);
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 0 0 10px 10px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #272822;
+}
+
+nav {
+    text-align: center;
+    margin-top: 10px;
+}
+
+nav a {
+    color: #272822;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    margin: 0 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+nav a:hover {
+    background: #a6e22e;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.reviewee-section {
+    background: rgba(62, 61, 50, 0.8);
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 80%;
+}
+
+.feedback-table, .score-table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+    background: rgba(62, 61, 50, 0.8);
+    color: #f8f8f2;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.feedback-table th, .feedback-table td, .score-table th, .score-table td {
+    padding: 10px;
+    border: 1px solid rgba(117, 113, 94, 0.8);
+    text-align: left;
+}
+
+.feedback-table th, .score-table th {
+    background: rgba(73, 72, 62, 0.8);
+    color: #a6e22e;
+}
+
+.feedback-table tr:nth-child(even), .score-table tr:nth-child(even) {
+    background: rgba(73, 72, 62, 0.6);
+}
+
+.feedback-table tr:hover, .score-table tr:hover {
+    background: rgba(56, 56, 48, 0.8);
+}
+
+.pagination {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.pagination a {
+    color: #272822;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    margin: 0 5px;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.pagination a:hover {
+    background: #a6e22e;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.pagination a.active {
+    background: #66d9ef;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.user-info {
+    float: right;
+    color: #272822;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
